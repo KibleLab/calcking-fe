@@ -1,0 +1,70 @@
+env:
+  browser: true
+  node: true
+  jest: true
+
+extends:
+  - airbnb
+  - airbnb-typescript
+  - next/core-web-vitals
+  - plugin:@typescript-eslint/recommended
+  - plugin:@tanstack/eslint-plugin-query/recommended
+  - plugin:prettier/recommended
+
+ignorePatterns:
+  - .env/
+  - .next/
+  - node_modules/
+  - public/
+  - .eslintrc.yaml
+  - .gitignore
+  - .nvmrc
+  - .prettierrc.yaml
+  - next-env.d.ts
+  - next.config.mjs
+  - package.json
+  - pnpm-lock.yaml
+  - postcss.config.js
+  - tailwind.config.js
+  - tsconfig.json
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  project: true
+  project: 'tsconfig.json'
+  sourceType: module
+  tsconfigDirRoot: __dirname
+
+plugins:
+  - '@typescript-eslint'
+  - '@tanstack/query'
+  - 'prettier'
+
+root: true
+
+rules:
+  # TypeScript
+  '@typescript-eslint/no-empty-interface': warn
+  '@typescript-eslint/no-empty-function': warn
+  '@typescript-eslint/no-explicit-any': warn
+  '@typescript-eslint/no-shadow': warn
+  '@typescript-eslint/no-unused-expressions': warn
+  '@typescript-eslint/no-unused-vars': warn
+  '@typescript-eslint/no-use-before-define': off
+  '@typescript-eslint/no-useless-constructor': warn
+  # import
+  'import/extensions': off
+  'import/no-extraneous-dependencies': off
+  'import/prefer-default-export': warn
+  # React
+  'react/no-unknown-property': [error, { ignore: ['css'] }]
+  'react/no-unused-prop-types': off
+  'react/jsx-filename-extension': [error, { extensions: ['.tsx', '.jsx'] }]
+  'react/jsx-no-useless-fragment': off
+  'react/jsx-props-no-spreading': off
+  'react/jsx-uses-react': off
+  'react/react-in-jsx-scope': off
+  'react/require-default-props': off
