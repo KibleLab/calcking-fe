@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Dongle';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
