@@ -1,4 +1,11 @@
+'use client';
+
+import { usePathname, useRouter } from 'next/navigation';
+
 export default function Page() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
     <main className='p-[80px]'>
       <div className='flex bg-white p-[80px] shadow-md'>
@@ -10,8 +17,10 @@ export default function Page() {
           />
         </div>
         <div className='w-full space-y-4'>
-          <div className='border-gray font-dongle border-b-2 text-6xl'>덧셈</div>
-          <button className='w-full rounded-lg bg-white p-8 text-left text-3xl shadow-lg'>
+          <div className='border-gray border-b-2 font-dongle text-6xl'>덧셈</div>
+          <button
+            className='w-full rounded-lg bg-white p-8 text-left text-3xl shadow-lg'
+            onClick={() => router.push(`${pathname}/units-to-units`)}>
             몇 + 몇 (최대 한번 올림) <p className='text-lx text-gray-500'>A-1</p>
           </button>
           <button className='w-full rounded-lg bg-white p-8 text-left text-3xl shadow-lg'>
