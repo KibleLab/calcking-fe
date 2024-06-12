@@ -2,14 +2,14 @@ import Card from '../../_components/Card';
 import { Key } from 'react';
 
 const studyTopics = [
-  { image: './imgs/calcMan1.png', title: '덧셈', href: '/gen-questions/add' },
-  { image: './imgs/calcGirl1.png', title: '뺄셈', href: '/gen-questions' },
-  { image: './imgs/calcMan2.png', title: '곱셈', href: '/gen-questions' },
-  { image: './imgs/calcGirl2.png', title: '나눗셈', href: '/gen-questions' },
-  { image: './imgs/calcMan3.png', title: '분수', href: '/gen-questions' },
-  { image: './imgs/calcGirl3.png', title: '소수', href: '/gen-questions' },
-  { image: './imgs/calcMan4.png', title: '자연수', href: '/gen-questions' },
-  { image: './imgs/calcGirl4.png', title: '분수와 소수', href: '/gen-questions' },
+  { image: './imgs/calcMan1.svg', title: '덧셈', href: '/gen-questions/add' },
+  { image: './imgs/calcGirl1.svg', title: '뺄셈', href: '/gen-questions' },
+  { image: './imgs/calcMan2.svg', title: '곱셈', href: '/gen-questions' },
+  { image: './imgs/calcGirl2.svg', title: '나눗셈', href: '/gen-questions' },
+  { image: './imgs/calcMan3.svg', title: '분수', href: '/gen-questions' },
+  { image: './imgs/calcGirl3.svg', title: '소수', href: '/gen-questions' },
+  { image: './imgs/calcMan4.svg', title: '자연수', href: '/gen-questions' },
+  { image: './imgs/calcGirl4.svg', title: '분수와 소수', href: '/gen-questions' },
 ];
 
 interface TopicProps {
