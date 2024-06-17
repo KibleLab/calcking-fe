@@ -9,3 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --gnb-root-height: 102px;
+}

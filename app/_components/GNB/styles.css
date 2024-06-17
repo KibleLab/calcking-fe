@@ -1,0 +1,9 @@
+.gnb-root {
+  @apply fixed;
+  @apply box-border inline-flex;
+  @apply justify-between gap-[1560px];
+  @apply h-[var(--gnb-root-height)] w-[1920px];
+  @apply px-[80px];
+  @apply bg-[#FFFFFF];
+  @apply border-0 border-b-2 border-solid border-b-[#DDDDDD];
+}

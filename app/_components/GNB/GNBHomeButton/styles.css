@@ -1,0 +1,7 @@
+.gnb-home-button-root {
+  @apply inline-flex;
+  @apply items-center justify-center;
+  @apply h-[100px] w-[100px];
+  @apply bg-[#FFFFFF];
+  @apply hover:bg-slate-100;
+}
