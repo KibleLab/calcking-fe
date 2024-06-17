@@ -1,43 +1,16 @@
 import { useState, useEffect } from 'react';
+import { QuestionJSON, QuestionJSONArray } from '@/app/_types/question';
 
-interface QuestionArray {
-  question_number: number;
-  first_number: number;
-  last_number: number;
-  answer: number;
-  operator: string;
-}
+type FetchFunction = (params: any) => Promise<{ data: QuestionJSON }>;
 
-interface QuestionJSON {
-  questions_id: string;
-  questions_title: string;
-  questions_level: string;
-  questions: QuestionArray[];
-}
-
-interface QuestionJSONArray {
-  questionJSONArray: QuestionJSON[];
-}
-
-interface QuestionParams {
-  numberOfQuestions: number;
-  carry: number;
-}
-
-type FetchFunction = (params: QuestionParams) => Promise<{ data: QuestionJSON }>;
-
-const useFetchQuestions = (
-  fetchFunction: FetchFunction,
-  initialParams: QuestionParams,
-  page: number,
-) => {
+const useFetchQuestions = (fetchFunction: FetchFunction, initialParams: any, page: number = 1) => {
   const [state, setState] = useState<QuestionJSONArray>({
     questionJSONArray: [],
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async (params: QuestionParams) => {
+  const fetchData = async (params: any) => {
     try {
       const questionApiDataList = [];
       for (let i = 0; i < page; i++) {
