@@ -20,8 +20,8 @@ interface TopicProps {
 
 export default function Page() {
   return (
-    <div className='p-[80px]'>
-      <div className='w-[1760px] bg-white p-[80px]'>
+    <div className='p-[36px]'>
+      <div className='w-full bg-white p-[80px]'>
         <div className='border-gray mb-[80px] border-b-2 font-dongle text-[96px]'>학습지</div>
         <div className='grid grid-cols-2 gap-[80px] md:grid-cols-4'>
           {studyTopics.map((topic: TopicProps, index: Key) => (

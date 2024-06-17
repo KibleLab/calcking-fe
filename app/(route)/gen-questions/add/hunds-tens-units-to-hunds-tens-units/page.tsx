@@ -18,7 +18,7 @@ export default function Page() {
 
   // api에서 question 데이터 가져오기
   const fetchFunction = (params: { numberOfQuestions: number; carry: number }) =>
-    questionApi.getUnitsToUnits(params);
+    questionApi.getHundsTensUnitsToHundsTensUnits(params);
 
   const { state, error, loading } = useFetchQuestions(
     fetchFunction,
