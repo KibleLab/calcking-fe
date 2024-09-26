@@ -42,7 +42,7 @@ export default function StudyPaper(props: QuestionJSON & { answer: boolean; page
         </div>
 
         {/* questions 영역 */}
-        <div className={`grid h-[85%] grid-cols-${4} gap-12 p-[80px]`}>
+        <div className={`grid h-[85%] grid-cols-4 gap-12 p-[80px]`}>
           {props.questions.map((item) => (
             <div
               className='text-4xl '
